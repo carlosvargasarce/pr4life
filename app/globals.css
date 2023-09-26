@@ -4,8 +4,8 @@
 
 @layer components {
   /* main */
-  .main-container {
-    @apply flex min-h-screen flex-1 flex-col items-center bg-dark-1 px-6 pb-10 pt-28 max-md:pb-32 sm:px-10;
+  .pr_main-container {
+    @apply flex min-h-screen flex-1 flex-col items-center px-6 pb-10 pt-28 max-md:pb-32 sm:px-10;
   }
 
   /* Head Text */
@@ -29,7 +29,7 @@
   }
 
   .community-card_btn {
-    @apply rounded-lg bg-primary-500 px-5 py-1.5 text-small-regular !text-light-1 !important;
+    @apply rounded-lg bg-primary px-5 py-1.5 text-small-regular !text-light-1 !important;
   }
 
   /* thread card  */
@@ -47,7 +47,7 @@
   }
 
   .user-card_btn {
-    @apply h-auto min-w-[74px] rounded-lg bg-primary-500 text-[12px] text-light-1 !important;
+    @apply h-auto min-w-[74px] rounded-lg bg-primary text-[12px] text-light-1 !important;
   }
 
   .searchbar {
@@ -58,36 +58,36 @@
     @apply border-none bg-dark-3 text-base-regular text-light-4 outline-none !important;
   }
 
-  .topbar {
-    @apply fixed top-0 z-30 flex w-full items-center justify-between bg-dark-2 px-6 py-3;
+  .pr_topbar {
+    @apply fixed top-0 z-30 flex w-full items-center justify-between bg-dark-1 xs:px-10 px-6 py-4;
   }
 
-  .bottombar {
-    @apply fixed bottom-0 z-10 w-full rounded-t-3xl bg-glassmorphism p-4 backdrop-blur-lg xs:px-7 md:hidden;
+  .pr_bottombar {
+    @apply fixed bottom-0 z-10 w-full bg-dark-1 p-4 backdrop-blur-lg xs:px-7 md:hidden;
   }
 
-  .bottombar_container {
+  .pr_bottombar_container {
     @apply flex items-center justify-between gap-3 xs:gap-5;
   }
 
-  .bottombar_link {
-    @apply relative flex flex-col items-center gap-2 rounded-lg p-2 sm:flex-1 sm:px-2 sm:py-2.5;
+  .pr_bottombar_link {
+    @apply relative flex flex-col items-center gap-2 rounded-lg p-2 text-light-1 sm:flex-1 sm:px-2 sm:py-2.5;
   }
 
-  .leftsidebar {
-    @apply sticky left-0 top-0 z-20 flex h-screen w-fit flex-col justify-between overflow-auto border-r border-r-dark-4 bg-dark-2 pb-5 pt-28 max-md:hidden;
+  .pr_leftsidebar {
+    @apply sticky left-0 top-0 z-20 flex h-screen w-fit flex-col justify-between overflow-auto border-r bg-dark-1 pb-5 pt-28 max-md:hidden;
   }
 
-  .leftsidebar_link {
-    @apply relative flex justify-start gap-4 rounded-lg p-4;
+  .pr_leftsidebar_link {
+    @apply relative flex justify-start gap-4 rounded-lg p-4 text-light-1;
   }
 
   .pagination {
     @apply mt-10 flex w-full items-center justify-center gap-5;
   }
 
-  .rightsidebar {
-    @apply sticky right-0 top-0 z-20 flex h-screen w-fit flex-col justify-between gap-12 overflow-auto border-l border-l-dark-4 bg-dark-2 px-10 pb-6 pt-28 max-xl:hidden;
+  .pr_rightsidebar {
+    @apply sticky right-0 top-0 z-20 flex h-screen w-fit flex-col justify-between gap-12 overflow-auto border-l bg-dark-1 px-10 pb-6 pt-28 max-xl:hidden;
   }
 }
 
@@ -96,22 +96,22 @@
     @apply invert-[50%] brightness-200;
   }
 
-  .custom-scrollbar::-webkit-scrollbar {
+  .pr_custom-scrollbar::-webkit-scrollbar {
     width: 3px;
     height: 3px;
     border-radius: 2px;
   }
 
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: #09090a;
+  .pr_custom-scrollbar::-webkit-scrollbar-track {
+    background: #131313;
   }
 
-  .custom-scrollbar::-webkit-scrollbar-thumb {
+  .pr_custom-scrollbar::-webkit-scrollbar-thumb {
     background: #5c5c7b;
     border-radius: 50px;
   }
 
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  .pr_custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #7878a3;
   }
 }
@@ -157,5 +157,5 @@
 }
 
 .comment-form_btn {
-  @apply rounded-3xl bg-primary-500 px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
+  @apply rounded-3xl bg-primary px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
 }
