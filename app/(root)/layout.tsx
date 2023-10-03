@@ -27,7 +27,7 @@ export default function RootLayout({
 					<main className='flex flex-row'>
 						<LeftSidebar />
 							<section className='pr_main-container'>
-								<div className='w-full max-w-4xl'>
+								<div className='w-full'>
 									{children}
 								</div>
 							</section>

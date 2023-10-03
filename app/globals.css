@@ -9,8 +9,12 @@
   }
 
   /* Head Text */
-  .head-text {
+  .pr_head-text {
     @apply text-heading2-bold text-light-1;
+  }
+
+  .pr_head-text-dark {
+    @apply text-heading2-bold text-dark-1;
   }
 
   /* Activity */
@@ -134,21 +138,23 @@
   @apply flex min-h-[50px] flex-1 items-center gap-3 bg-dark-2 text-light-2 data-[state=active]:bg-[#0e0e12] data-[state=active]:text-light-2 !important;
 }
 
-.no-focus {
+.pr_no-focus {
   @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
 }
 
 /* Account Profile  */
-.account-form_image-label {
+.pr_account-form_image-label {
   @apply flex h-24 w-24 items-center justify-center rounded-full bg-dark-4 !important;
 }
 
-.account-form_image-input {
+.pr_account-form_image-input {
   @apply cursor-pointer border-none bg-transparent outline-none file:text-blue !important;
 }
 
-.account-form_input {
-  @apply border border-dark-4 bg-dark-3 text-light-1 !important;
+::-webkit-file-upload-button { cursor:pointer; }
+
+.pr_account-form_input {
+  @apply border border-dark-4 bg-dark-1 text-light-1 !important;
 }
 
 /* Comment Form */
