@@ -1,4 +1,4 @@
-import PostPR from "@/components/forms/PostPR";
+import PostPersonalRecords from "@/components/forms/PostPersonalRecords";
 import { fetchUser } from "@/lib/actions/user.actions";
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from 'next/navigation';
@@ -15,7 +15,7 @@ async function Page() {
     return (
         <>
             <h1 className="pr_head-text-dark">Add Personal Record</h1>
-            <PostPR userId={userInfo._id} />
+            <PostPersonalRecords userId={userInfo._id.toString()} />
         </>
     )
 }
