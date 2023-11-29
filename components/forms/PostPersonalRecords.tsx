@@ -42,7 +42,11 @@ const PostPersonalRecords = ({ userId }: Props) => {
     const form = useForm({
         resolver: zodResolver(PersonalRecordsValidation),
         defaultValues: {
+            name: "",
+            unit: "",
+            variation: "",
             details: "",
+            value: "",
             accountId: userId,
             entryDate: new Date()
         }
@@ -52,7 +56,11 @@ const PostPersonalRecords = ({ userId }: Props) => {
     const onSubmit = async  (values: z.infer<typeof PersonalRecordsValidation>) => {
         console.log('VALUES', values);
         await createPersonalRecord({ 
+            name: values.name,
             details: values.details,
+            value: values.value,
+            unit: values.unit,
+            variation: values.variation,
             entryDate: new Date(values.entryDate),
             owner: userId,
             path: pathname
@@ -67,6 +75,86 @@ const PostPersonalRecords = ({ userId }: Props) => {
                     onSubmit={form.handleSubmit(onSubmit)}
                     className="mt-10 flex flex-col justify-start gap-10"
                 >
+                    <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                            <FormItem className="flex flex-col gap-3 w-full">
+                                <FormLabel className="text-base-semibold">
+                                    Name
+                                </FormLabel>
+                                <FormControl>
+                                    <Input
+                                        type="text"
+                                        className="pr_no-focus"
+                                        {...field}
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name="value"
+                        render={({ field }) => (
+                            <FormItem className="flex flex-col gap-3 w-full">
+                                <FormLabel className="text-base-semibold">
+                                    Value
+                                </FormLabel>
+                                <FormControl>
+                                    <Input
+                                        type="text"
+                                        className="pr_no-focus"
+                                        {...field}
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name="unit"
+                        render={({ field }) => (
+                            <FormItem className="flex flex-col gap-3 w-full">
+                                <FormLabel className="text-base-semibold">
+                                    Unit
+                                </FormLabel>
+                                <FormControl>
+                                    <Input
+                                        type="text"
+                                        className="pr_no-focus"
+                                        {...field}
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name="variation"
+                        render={({ field }) => (
+                            <FormItem className="flex flex-col gap-3 w-full">
+                                <FormLabel className="text-base-semibold">
+                                    Variation
+                                </FormLabel>
+                                <FormControl>
+                                    <Input
+                                        type="text"
+                                        className="pr_no-focus"
+                                        {...field}
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
                     <FormField
                         control={form.control}
                         name="details"

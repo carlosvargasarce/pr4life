@@ -1,7 +1,23 @@
 import { Schema, model, models } from "mongoose";
 
 const personalRecordsSchema = new Schema({
+    name: { 
+        type: String,
+        required: true
+    },
     details: { type: String },
+    value: {
+        type: String,
+        required: true
+    },
+    unit: { 
+        type: String,
+        required: true
+    },
+    variation: { 
+        type: String,
+        required: true
+    },
     owner: {
         type: Schema.Types.ObjectId,
         ref: 'User',
