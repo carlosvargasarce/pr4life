@@ -23,8 +23,8 @@
   }
 
   /* No Result */
-  .no-result {
-    @apply text-center !text-base-regular text-light-3;
+  .pr_no-result {
+    @apply text-center !text-base-regular text-dark-1;
   }
 
   /* Community Card */
@@ -129,8 +129,8 @@
 /* Shadcn Component Styles */
 
 /* Tab */
-.tab {
-  @apply flex min-h-[50px] flex-1 items-center gap-3 bg-dark-2 text-light-2 data-[state=active]:bg-[#0e0e12] data-[state=active]:text-light-2 !important;
+.pr_tab {
+  @apply rounded-md p-0 flex min-h-[50px] flex-1 items-center bg-dark-4 text-light-1 data-[state=active]:bg-dark-1 data-[state=active]:text-light-2 !important;
 }
 
 .pr_no-focus {

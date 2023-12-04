@@ -32,9 +32,9 @@ export const sidebarLinks = [
 ];
   
 export const profileTabs = [
-    { value: "threads", label: "Threads", icon: "/assets/reply.svg" },
-    { value: "replies", label: "Replies", icon: "/assets/members.svg" },
-    { value: "tagged", label: "Tagged", icon: "/assets/tag.svg" },
+    { value: "personal-records", label: "Personal Records", icon: "/assets/pr.svg" },
+    { value: "comments", label: "Comments", icon: "/assets/reply.svg" },
+    { value: "share", label: "Share", icon: "/assets/share.svg" },
 ];
   
 export const communityTabs = [

@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import User from "../models/user.model";
 import { connectToDB } from "../mongoose";
+import PersonalRecords from "../models/personalRecords.model";
 
 interface Params {
     userId: string;
@@ -61,5 +62,21 @@ export async function fetchUser(userId: string) {
         //})
     } catch (error: any) {
         throw new Error(`Failed to fetch user: ${error.message}`)
+    }
+}
+
+export async function fetchUserPersonalRecords(userId: string) {
+    try {
+        connectToDB();
+
+        const personalRecords = await User.findOne({ id: userId })
+        .populate({
+            path: 'personalRecords',
+            model: PersonalRecords
+        })
+
+        return personalRecords;
+    } catch (error: any) {
+        throw new Error(`Failed to fetch user personal records: ${error.message}`)
     }
 }
