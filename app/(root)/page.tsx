@@ -23,7 +23,7 @@ export default async function Home() {
 
 			<section className="mt-9 flex flex-col gap-6">
 				{result.personalRecords.length === 0 ? (
-					<p className="pr_no-result">No PR's found</p>
+					<p className="pr_no-result">No PRs found</p>
 				) : (
 					<>
 						{result.personalRecords.map((pr: any) => (
