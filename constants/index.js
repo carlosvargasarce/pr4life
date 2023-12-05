@@ -6,7 +6,7 @@ export const sidebarLinks = [
     },
     {
       type: "File-addition-one",
-      route: "/add-pr",
+      route: "/add-personal-record",
       label: "Add PR",
     },
     {
@@ -20,25 +20,25 @@ export const sidebarLinks = [
       label: "Groups",
     },
     {
-      type: "Search",
-      route: "/search",
-      label: "Search",
+      type: "Every-user",
+      route: "/users",
+      label: "Users",
     },
     {
       type: "Avatar",
       route: "/profile",
       label: "Profile",
     },
-  ];
+];
   
-  export const profileTabs = [
-    { value: "threads", label: "Threads", icon: "/assets/reply.svg" },
-    { value: "replies", label: "Replies", icon: "/assets/members.svg" },
-    { value: "tagged", label: "Tagged", icon: "/assets/tag.svg" },
-  ];
+export const profileTabs = [
+    { value: "personal-records", label: "Personal Records", icon: "/assets/pr.svg" },
+    { value: "comments", label: "Comments", icon: "/assets/reply.svg" },
+    { value: "share", label: "Share", icon: "/assets/share.svg" },
+];
   
-  export const communityTabs = [
+export const communityTabs = [
     { value: "threads", label: "Threads", icon: "/assets/reply.svg" },
     { value: "members", label: "Members", icon: "/assets/members.svg" },
     { value: "requests", label: "Requests", icon: "/assets/request.svg" },
-  ];
+];

@@ -16,6 +16,20 @@ module.exports = {
       },
     },
     fontSize: {
+      "big-heading1-bold": [
+        "72px",
+        {
+          lineHeight: "140%",
+          fontWeight: "700",
+        },
+      ],
+      "big-heading2-bold": [
+        "56px",
+        {
+          lineHeight: "140%",
+          fontWeight: "700",
+        },
+      ],
       "heading1-bold": [
         "36px",
         {
@@ -179,7 +193,7 @@ module.exports = {
         "logout-btn": "#FF5A5A",
         "navbar-menu": "rgba(16, 16, 18, 0.6)",
         "dark-1": "#131313", //Used
-        "dark-2": "#121417",
+        "dark-2": "#1A1A1A", //Used
         "dark-3": "#101012",
         "dark-4": "#1F1F22",
         "light-1": "#FFFFFF", //Used
@@ -192,6 +206,8 @@ module.exports = {
       boxShadow: {
         "count-badge": "0px 0px 6px 2px rgba(219, 188, 159, 0.30)",
         "groups-sidebar": "-30px 0px 60px 0px rgba(28, 28, 31, 0.50)",
+        "pr-card": "0 8px 24px 0 rgba(149, 157, 165, 0.25)",
+        "pr-card-hover": "0 8px 32px 0 rgba(149, 157, 165, 0.50)"
       },
       screens: {
         xs: "400px",

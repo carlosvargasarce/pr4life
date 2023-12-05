@@ -9,8 +9,12 @@
   }
 
   /* Head Text */
-  .head-text {
+  .pr_head-text {
     @apply text-heading2-bold text-light-1;
+  }
+
+  .pr_head-text-dark {
+    @apply text-heading2-bold text-dark-1;
   }
 
   /* Activity */
@@ -19,8 +23,8 @@
   }
 
   /* No Result */
-  .no-result {
-    @apply text-center !text-base-regular text-light-3;
+  .pr_no-result {
+    @apply text-center !text-base-regular text-dark-1;
   }
 
   /* Community Card */
@@ -32,18 +36,13 @@
     @apply rounded-lg bg-primary px-5 py-1.5 text-small-regular !text-light-1 !important;
   }
 
-  /* thread card  */
-  .thread-card_bar {
-    @apply relative mt-2 w-0.5 grow rounded-full bg-neutral-800;
-  }
-
   /* User card */
   .user-card {
     @apply flex flex-col justify-between gap-4 max-xs:rounded-xl max-xs:bg-dark-3 max-xs:p-4 xs:flex-row xs:items-center;
   }
 
   .user-card_avatar {
-    @apply flex flex-1 items-start justify-start gap-3 xs:items-center;
+    @apply flex items-start justify-start gap-3 xs:items-center;
   }
 
   .user-card_btn {
@@ -130,25 +129,27 @@
 /* Shadcn Component Styles */
 
 /* Tab */
-.tab {
-  @apply flex min-h-[50px] flex-1 items-center gap-3 bg-dark-2 text-light-2 data-[state=active]:bg-[#0e0e12] data-[state=active]:text-light-2 !important;
+.pr_tab {
+  @apply rounded-md p-0 flex min-h-[50px] flex-1 items-center bg-dark-4 text-light-1 data-[state=active]:bg-dark-1 data-[state=active]:text-light-2 !important;
 }
 
-.no-focus {
+.pr_no-focus {
   @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
 }
 
 /* Account Profile  */
-.account-form_image-label {
+.pr_account-form_image-label {
   @apply flex h-24 w-24 items-center justify-center rounded-full bg-dark-4 !important;
 }
 
-.account-form_image-input {
+.pr_account-form_image-input {
   @apply cursor-pointer border-none bg-transparent outline-none file:text-blue !important;
 }
 
-.account-form_input {
-  @apply border border-dark-4 bg-dark-3 text-light-1 !important;
+::-webkit-file-upload-button { cursor:pointer; }
+
+.pr_account-form_input {
+  @apply border border-dark-4 bg-dark-1 text-light-1 !important;
 }
 
 /* Comment Form */
