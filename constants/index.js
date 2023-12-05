@@ -20,9 +20,9 @@ export const sidebarLinks = [
       label: "Groups",
     },
     {
-      type: "Search",
-      route: "/search",
-      label: "Search",
+      type: "Every-user",
+      route: "/users",
+      label: "Users",
     },
     {
       type: "Avatar",

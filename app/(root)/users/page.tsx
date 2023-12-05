@@ -22,7 +22,7 @@ const Page = async () => {
 
     return (
         <section>
-           <h1 className="pr_head-text-dark text-left">Search</h1>
+           <h1 className="pr_head-text-dark text-left">Users</h1>
 
            <div className="mt-14 flex flex-col gap-9">
                 {result.users.length === 0 ? (

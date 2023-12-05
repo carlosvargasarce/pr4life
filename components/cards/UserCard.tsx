@@ -1,8 +1,9 @@
 'use client';
 
 import Image from "next/image";
-import { Button } from "react-day-picker";
+
 import { useRouter } from "next/navigation";
+import { Button } from "../ui/button";
 
 interface Props {
     id: string;
@@ -29,12 +30,12 @@ const UserCard = ({
                     alt="logo"
                     width={48}
                     height={48}
-                    className="rounded-full"
+                    className="rounded-full bg-light-1 border border-light-2 aspect-square"
                 />
             </div>
 
             <div className="flex-1 text-ellipsis">
-                <h4 className="text-base-semibold text-light-1">{name}</h4>
+                <h4 className="text-base-semibold max-xs:text-light-1">{name}</h4>
                 <p className="text-small-medium text-gray-1">{username}</p>
             </div>
 
