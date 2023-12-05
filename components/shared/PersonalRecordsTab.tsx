@@ -32,6 +32,7 @@ const PersonalRecordsTab = async ({
                     variation={pr.variation}
                     // owner={pr.owner}
                     date={pr.entryDate}
+                    group={pr.group}
                 />
             ))}
         </section>
