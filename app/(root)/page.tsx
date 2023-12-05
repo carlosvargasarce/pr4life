@@ -38,6 +38,7 @@ export default async function Home() {
 								variation={pr.variation}
 								// owner={pr.owner}
 								date={pr.entryDate}
+								group={pr.group}
 							/>
 						))}
 					</>

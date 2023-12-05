@@ -1,23 +1,29 @@
 'use client';
 
 import Icon from '@icon-park/react/es/all';
-import { formatDateString2 } from "@/lib/utils";
+import { formatDateString, formatDateString2 } from "@/lib/utils";
 import Link from 'next/link';
+import Image from "next/image";
 
 interface Props {
-    id: string,
+    id: string;
     //currentUserId: string,
     //details: string,
-    name: string,
-    value: string,
-    unit: string,
+    name: string;
+    value: string;
+    unit: string;
     // owner: {
     //     name: string,
     //     image: string,
     //     id: string
     // },
-    variation: string,
-    date: Date
+    group: {
+        id: string;
+        name: string;
+        image: string;
+    } | null;
+    variation: string;
+    date: Date;
 }
 
 const PrCard = ({
@@ -29,6 +35,7 @@ const PrCard = ({
     unit,
     variation,
     // owner,
+    group,
     date
 }: Props) => {
     return (
@@ -58,6 +65,21 @@ const PrCard = ({
                             </p>
                         </div>
                     </div>
+                    {group && (
+                        <Link href={`/groups/${group.id}`} className="mt-5 flex- items-center">
+                            <p className='text-subtle-medium text-gray-1'>
+                                {formatDateString(date.toISOString())}
+                                - {group.name} Group
+                            </p>
+
+                            <Image 
+                                src={group.image}
+                                alt={group.name}
+                                width={14}
+                                height={14}
+                            />
+                        </Link>
+                    )}
                 </div>
             </article>
         </Link>

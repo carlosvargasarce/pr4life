@@ -25,7 +25,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { usePathname, useRouter } from "next/navigation";
-
+import { useOrganization } from "@clerk/nextjs";
 //import { updateUser } from "@/lib/actions/user.actions";
 import { PersonalRecordsValidation } from "@/lib/validations/personalRecords";
 import { createPersonalRecord } from "@/lib/actions/pr.actions";
@@ -38,6 +38,9 @@ interface Props {
 const PostPersonalRecords = ({ userId }: Props) => {
     const router = useRouter();
     const pathname = usePathname();
+    const { organization } = useOrganization();
+
+    console.log('ORGANIZATION', organization);
 
     const form = useForm({
         resolver: zodResolver(PersonalRecordsValidation),
@@ -54,7 +57,6 @@ const PostPersonalRecords = ({ userId }: Props) => {
 
 
     const onSubmit = async  (values: z.infer<typeof PersonalRecordsValidation>) => {
-        console.log('VALUES', values);
         await createPersonalRecord({ 
             name: values.name,
             details: values.details,
@@ -63,8 +65,9 @@ const PostPersonalRecords = ({ userId }: Props) => {
             variation: values.variation,
             entryDate: new Date(values.entryDate),
             owner: userId,
-            path: pathname
-        });
+            path: pathname,
+            groupId: organization ? organization.id : null
+        });        
 
         router.push("/");
     }
