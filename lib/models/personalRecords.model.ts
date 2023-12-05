@@ -26,6 +26,10 @@ const personalRecordsSchema = new Schema({
     entryDate: {
         type: Date, 
         default: Date.now
+    },
+    group: {
+        type: Schema.Types.ObjectId,
+        ref: 'Group'
     }
 });
 

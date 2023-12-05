@@ -75,11 +75,11 @@ export async function fetchGroupPosts(id: string) {
     connectToDB();
 
     const groupPosts = await Group.findById(id).populate({
-      path: "threads",
+      path: "personalRecords",
       model: Thread,
       populate: [
         {
-          path: "author",
+          path: "owner",
           model: User,
           select: "name image id", // Select the "name" and "_id" fields from the "User" model
         },
@@ -87,7 +87,7 @@ export async function fetchGroupPosts(id: string) {
           path: "children",
           model: Thread,
           populate: {
-            path: "author",
+            path: "owner",
             model: User,
             select: "image _id", // Select the "name" and "_id" fields from the "User" model
           },
@@ -282,7 +282,7 @@ export async function deleteGroup(groupId: string) {
       throw new Error("Group not found");
     }
 
-    // Delete all threads associated with the group
+    // Delete all personalRecords associated with the group
     await Thread.deleteMany({ group: groupId });
 
     // Find all users who are part of the group

@@ -20,7 +20,7 @@ const groupSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
-  threads: [
+  personalRecords: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "PersonalRecords",
