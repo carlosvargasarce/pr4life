@@ -65,22 +65,12 @@ const PrCard = ({
                             </p>
                         </div>
                     </div>
-                    {group && (
-                        <Link href={`/groups/${group.id}`} className="mt-5 flex- items-center">
-                            <p className='text-subtle-medium text-gray-1'>
-                                {formatDateString(date.toISOString())}
-                                - {group.name} Group
-                            </p>
-
-                            <Image 
-                                src={group.image}
-                                alt={group.name}
-                                width={14}
-                                height={14}
-                            />
-                        </Link>
-                    )}
                 </div>
+                {group && (
+                    <p className='mt-6 basis-full text-subtle-medium text-gray-1'>
+                        Group Entry
+                    </p>
+                )}
             </article>
         </Link>
     )
